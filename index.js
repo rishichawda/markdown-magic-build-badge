@@ -42,7 +42,7 @@ function applyTransform(data) {
      return appendSlash ? `/${branch}` : branch;
   }
 
-  return data.replace("{current_branch}", branch ? handleSlash() : "");
+  return data.split("{current_branch}").join(branch ? handleSlash() : "");
 }
 
 module.exports = function travisBadgePlugin(content, pluginOptions, config) {
