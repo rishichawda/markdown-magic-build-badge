@@ -1,0 +1,23 @@
+{
+  "name": "branch-badge-plugin",
+  "version": "0.0.1",
+  "description": "A plugin to keep badges updated with branch.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "badge",
+    "plugin",
+    "travis",
+    "circleci",
+    "readme",
+    "git",
+    "repository"
+  ],
+  "author": "rishichawda",
+  "license": "MIT",
+  "devDependencies": {
+    "markdown-magic": "^0.1.25"
+  }
+}
