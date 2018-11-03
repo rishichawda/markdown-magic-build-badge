@@ -23,40 +23,48 @@ function getCurrentBranch() {
     return data;
   } catch (err) {
     console.log(err);
-    throw new Error("Failed to get current branch name.");
+    err = new Error("Failed to get current branch name.");
+    throw err;
   }
 }
 
-function applyTransform(data) {
+function applyTransform(data, config) {
   let branch = getCurrentBranch();
 
   let appendSlash = true;
-  let replaceableContent = data.search("{current_branch}");
-  if(replaceableContent === -1) {
-    throw new Error('No placeholder found!');
+  let replaceableContent = data.search(
+    config.placeholder ? `{${config.placeholder}}` : "{current_branch}"
+  );
+  if (replaceableContent === -1) {
+    const err = new Error(
+      `Unable to find the placeholder provided in ${config.originalPath}.`
+    );
+    throw err;
   } else {
-    appendSlash = data[replaceableContent-1] === '/' ? false : appendSlash;
+    appendSlash = data[replaceableContent - 1] === "/" ? false : appendSlash;
   }
 
   function handleSlash() {
-     return appendSlash ? `/${branch}` : branch;
+    return appendSlash ? `/${branch}` : branch;
   }
 
-  return data.split("{current_branch}").join(branch ? handleSlash() : "");
+  return data
+    .split(config.placeholder ? `{${config.placeholder}}` : "{current_branch}")
+    .join(branch ? handleSlash() : "");
 }
 
-module.exports = function travisBadgePlugin(content, pluginOptions, config) {
+module.exports = function(content, pluginOptions, { originalPath }) {
   // setup plugin config
   const defaultOptions = {
-    addNewLine: true
+    addNewLine: false
   };
 
   const userOptions = pluginOptions || {};
-  const pluginConfig = { defaultOptions, ...userOptions };
+  const pluginConfig = { defaultOptions, ...userOptions, originalPath };
 
   // get and transform template contents.
   let template = getTemplate(pluginConfig.src);
-  template = applyTransform(template);
+  template = applyTransform(template, pluginConfig);
 
   // return the transform function
   return badges(content, pluginConfig, template);

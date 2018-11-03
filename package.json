@@ -4,7 +4,7 @@
   "description": "A plugin to keep badges updated with branch.",
   "main": "index.js",
   "scripts": {
-    "prepublish": "cd example && node example.js"
+    "prepublish": "cd example && rm -rf node_modules && npm install && npm run update-docs"
   },
   "keywords": [
     "badge",
