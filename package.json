@@ -1,6 +1,6 @@
 {
   "name": "markdown-magic-branch-badge",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "A plugin to keep badges updated with branch.",
   "main": "index.js",
   "scripts": {
