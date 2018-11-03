@@ -1,0 +1,14 @@
+{
+  "name": "markdown-magic-build-badge-example",
+  "version": "1.0.0",
+  "description": "Example usage of markdown-magic-build-badge plugin.",
+  "main": "example.js",
+  "scripts": {
+    "update-docs": "node ./example.js"
+  },
+  "author": "rishichawda",
+  "license": "MIT",
+  "devDependencies": {
+    "markdown-magic": "^0.1.25"
+  }
+}

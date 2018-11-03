@@ -1,10 +1,10 @@
 const path = require('path');
 const transformMarkdown = require('markdown-magic');
-const travisBadgePlugin = require('../index.js');
+const badgePlugin = require('../index.js');
 
 const config = {
   transforms: {
-    travisBadgePlugin,
+    badgePlugin,
   },
 };
 
