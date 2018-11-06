@@ -9,6 +9,9 @@
   "repository": {
     "url": "https://github.com/rishichawda/markdown-magic-build-badge.git"
   },
+  "bin": {
+    "markdown-badge": "./bin/cli.js"
+  },
   "keywords": [
     "badge",
     "plugin",
