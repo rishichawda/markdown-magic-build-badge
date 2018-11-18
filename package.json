@@ -1,10 +1,16 @@
 {
   "name": "markdown-magic-branch-badge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A plugin to keep badges updated with branch.",
   "main": "index.js",
   "scripts": {
     "prepublish": "cd example && rm -rf node_modules && npm install && npm run update-docs"
+  },
+  "repository": {
+    "url": "https://github.com/rishichawda/markdown-magic-build-badge.git"
+  },
+  "bin": {
+    "markdown-badge": "./bin/cli.js"
   },
   "keywords": [
     "badge",
