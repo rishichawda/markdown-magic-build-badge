@@ -1,3 +1,10 @@
+[![npm package](https://img.shields.io/npm/v/markdown-magic-branch-badge/latest.svg)](https://www.npmjs.com/package/markdown-magic-branch-badge)
+[![npm downloads](https://img.shields.io/npm/dt/markdown-magic-branch-badge.svg)](https://www.npmjs.com/package/markdown-magic-branch-badge)
+[![GitHub issues](https://img.shields.io/github/issues/rishichawda/markdown-magic-build-badge.svg?style=popout)](https://github.com/rishichawda/markdown-magic-build-badge)
+[![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/markdown-magic-branch-badge.svg?style=popout)](https://www.npmjs.com/package/markdown-magic-branch-badge)
+![GitHub](https://img.shields.io/github/license/rishichawda/markdown-magic-build-badge.svg?style=popout)
+
+
 ## markdown-magic-branch-badge
 
 :star2: A plugin to update your branch badges to point to correct branch status via [markdown-magic](https://github.com/DavidWells/markdown-magic).
@@ -6,15 +13,13 @@ Supports all major vendors like [TravisCI](http://travis-ci.org/), [Codecov](htt
 
 <br />
 
-
+---
 
 ### Installation :
 
 ```
 npm i markdown-magic markdown-magic-branch-badge --save-dev
-```
-<br />
-
+``` 
 ### Usage :
 
 Create a file `update-readme.js` in your project directory.
@@ -37,6 +42,7 @@ function callback() {
 const markdownPath = path.join(__dirname, 'README.md');
 transformMarkdown(markdownPath, config, callback);
 ```
+
 <br />Create a file, `example-template` with your template.
 
 ```
@@ -77,6 +83,9 @@ node ./update-readme.js
 
 After running this command, now you should see the updated `README.md` with the badges according to your branch name.<br/>
 
+---
+
+
 
 ### Config options
 
@@ -87,12 +96,13 @@ After running this command, now you should see the updated `README.md` with the 
 | placeholder | Specify a custom placeholder for updating branch names.  |
 <br />
 
+---
+
 ##### Usage options:
 
 1. You can use it as a script on your  `package.json` and run it manually, or
 2. Use it in `pre-commit` and `post-checkout` hooks to keep your branches updated with the correct badge URLs.
 <br />
-
 
 
 
