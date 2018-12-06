@@ -4,6 +4,8 @@
 [![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/markdown-magic-branch-badge.svg?style=popout)](https://www.npmjs.com/package/markdown-magic-branch-badge)
 ![GitHub](https://img.shields.io/github/license/rishichawda/markdown-magic-build-badge.svg?style=popout)
 
+![David](https://img.shields.io/david/rishichawda/markdown-magic-build-badge.svg)
+
 
 ## markdown-magic-branch-badge
 
