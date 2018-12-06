@@ -5,7 +5,7 @@
 ![GitHub](https://img.shields.io/github/license/rishichawda/markdown-magic-build-badge.svg?style=popout)
 
 ![David](https://img.shields.io/david/rishichawda/markdown-magic-build-badge.svg)
-
+![David](https://img.shields.io/david/dev/rishichawda/markdown-magic-build-badge.svg)
 
 ## markdown-magic-branch-badge
 
