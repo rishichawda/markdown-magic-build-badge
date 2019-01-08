@@ -1,11 +1,11 @@
-[![npm package](https://img.shields.io/npm/v/markdown-magic-branch-badge/latest.svg)](https://www.npmjs.com/package/markdown-magic-branch-badge)
-[![npm downloads](https://img.shields.io/npm/dt/markdown-magic-branch-badge.svg)](https://www.npmjs.com/package/markdown-magic-branch-badge)
-[![GitHub issues](https://img.shields.io/github/issues/rishichawda/markdown-magic-build-badge.svg?style=popout)](https://github.com/rishichawda/markdown-magic-build-badge)
-[![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/markdown-magic-branch-badge.svg?style=popout)](https://www.npmjs.com/package/markdown-magic-branch-badge)
-![GitHub](https://img.shields.io/github/license/rishichawda/markdown-magic-build-badge.svg?style=popout)
+[![npm package](https://img.shields.io/npm/v/markdown-magic-branch-badge/latest.svg?style=flat-square)](https://www.npmjs.com/package/markdown-magic-branch-badge)
+[![npm downloads](https://img.shields.io/npm/dt/markdown-magic-branch-badge.svg?style=flat-square)](https://www.npmjs.com/package/markdown-magic-branch-badge)
+[![GitHub issues](https://img.shields.io/github/issues/rishichawda/markdown-magic-build-badge.svg?style=flat-square)](https://github.com/rishichawda/markdown-magic-build-badge)
+[![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/markdown-magic-branch-badge.svg?style=flat-square)](https://www.npmjs.com/package/markdown-magic-branch-badge)
+![GitHub](https://img.shields.io/github/license/rishichawda/markdown-magic-build-badge.svg?style=flat-square)
 
-![David](https://img.shields.io/david/rishichawda/markdown-magic-build-badge.svg)
-![David](https://img.shields.io/david/dev/rishichawda/markdown-magic-build-badge.svg)
+![David](https://img.shields.io/david/rishichawda/markdown-magic-build-badge.svg?style=flat-square)
+![David](https://img.shields.io/david/dev/rishichawda/markdown-magic-build-badge.svg?style=flat-square)
 
 ## markdown-magic-branch-badge
 
