@@ -12,19 +12,21 @@ const cliOptions = meow(`
     $ markdown-badge
   Options
     --update-docs, -u     Update file with correct badge url. Requires configuration file path.
-    --generate-hook, -gh  Generate hooks for markdown badge.
+    --generate-hook, -g   Generate hooks for markdown badge.
     --version, -v         Print installed markdown-badge version
   Examples
     $ markdown-badge -u ./generateBadges.js
-    $ markdown-badge -gh
+    $ markdown-badge -g
 `, {
   flags: {
-    generateHook: { type: 'boolean', alias: 'gh' },
+    updateDocs: { type: 'string', alias: 'u' },
+    generateHook: { type: 'boolean', alias: 'g' },
     version: { type: 'boolean', alias: 'v' }
   }
 });
 
 const options = {
+  updateDocs: (data) => mdbCli.updateFile(data),
   generateHook: () => mdbCli.generate(),
 };
 

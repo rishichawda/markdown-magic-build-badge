@@ -3,9 +3,11 @@ const mapCommands = (cliOptions, options) => {
   const matched = Object.keys(flags)
 	.map(flag => flags[flag] && flag)
 	.filter(flag => options[flag]);
-  options[matched]
-  ? options[matched]()
-  : cliOptions.showHelp();
+  flags.hasOwnProperty('u') || flags.hasOwnProperty('updateDocs')
+  ? options.updateDocs(flags.u || flags.updateDocs)
+  : options[matched]
+    ? options[matched]()
+    : cliOptions.showHelp();
 }
 
 module.exports = {
