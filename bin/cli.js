@@ -1,13 +1,14 @@
 #!/usr/bin/env node
-const updateNotifer = require('update-notifier');
-const meow = require('meow');
-const mdbCli = require('./mdb.js');
-const utils = require('./utils.js');
-const pkg = require('../package.json');
+const updateNotifer = require("update-notifier");
+const meow = require("meow");
+const mdbCli = require("./mdb.js");
+const utils = require("./utils.js");
+const pkg = require("../package.json");
 
 updateNotifer({ pkg }).notify();
 
-const cliOptions = meow(`
+const cliOptions = meow(
+  `
   Usage
     $ markdown-badge
   Options
@@ -17,17 +18,19 @@ const cliOptions = meow(`
   Examples
     $ markdown-badge -u ./generateBadges.js
     $ markdown-badge -g
-`, {
-  flags: {
-    updateDocs: { type: 'string', alias: 'u' },
-    generateHook: { type: 'boolean', alias: 'g' },
-    version: { type: 'boolean', alias: 'v' }
+`,
+  {
+    flags: {
+      updateDocs: { type: "string", alias: "u" },
+      generateHook: { type: "boolean", alias: "g" },
+      version: { type: "boolean", alias: "v" }
+    }
   }
-});
+);
 
 const options = {
-  updateDocs: (data) => mdbCli.updateFile(data),
-  generateHook: () => mdbCli.generate(),
+  updateDocs: data => mdbCli.updateFile(data),
+  generateHook: () => mdbCli.generate()
 };
 
 utils.mapCommands(cliOptions, options);
