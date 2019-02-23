@@ -1,6 +1,6 @@
 const path = require('path');
 const transformMarkdown = require('markdown-magic');
-const badgePlugin = require('../index.js');
+const badgePlugin = require('markdown-magic-branch-badge');
 
 const config = {
   transforms: {
