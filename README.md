@@ -9,11 +9,11 @@
 
 ## markdown-magic-branch-badge
 
+![demo](https://github.com/rishichawda/markdown-magic-build-badge/blob/master/example/demo.gif)
+
 :star2: A plugin to update your branch badges to point to correct branch status via [markdown-magic](https://github.com/DavidWells/markdown-magic).
 
 Supports all major vendors like [TravisCI](http://travis-ci.org/), [Codecov](https://codecov.io/), [CircleCI](https://circleci.com/) and many more that provide code repository status images and badges for readme files. :tada:
-
-<br />
 
 ---
 
