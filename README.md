@@ -80,7 +80,7 @@ If you are using your own placeholder, you can specify it like this :
 <br />Now, go to the terminal and run:
 
 ```
-node ./update-readme.js
+markdown-badge -u ./update-readme.js
 ```
 
 After running this command, now you should see the updated `README.md` with the badges according to your branch name.<br/>
@@ -102,8 +102,10 @@ After running this command, now you should see the updated `README.md` with the 
 
 ##### Usage options:
 
-1. You can use it as a script on your  `package.json` and run it manually, or
-2. Use it in `pre-commit` and `post-checkout` hooks to keep your branches updated with the correct badge URLs.
+Use it in `pre-commit` and `post-checkout` hooks to keep your branches updated with the correct badge URLs.
+
+To add a post-checkout hook via command-line, run `markdown-badge -g` in your project root and it will add it to the post-checkout hook to your repository.
+
 <br />
 
 
