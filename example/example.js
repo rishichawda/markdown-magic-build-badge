@@ -8,6 +8,8 @@ const config = {
   },
 };
 
+console.log(config.transforms)
+
 function callback() {
   console.log('ReadME generated.');
 }
