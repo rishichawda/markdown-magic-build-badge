@@ -10,6 +10,6 @@
   "license": "MIT",
   "devDependencies": {
     "markdown-magic": "^0.1.25",
-    "markdown-magic-branch-badge": "^1.1.0"
+    "markdown-magic-branch-badge": "../"
   }
 }

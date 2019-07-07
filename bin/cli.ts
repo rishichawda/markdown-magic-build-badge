@@ -1,13 +1,21 @@
 #!/usr/bin/env node
-const updateNotifer = require("update-notifier");
-const meow = require("meow");
-const mdbCli = require("./mdb.js");
-const utils = require("./utils.js");
+import updateNotifer from "update-notifier";
+import meow from "meow";
+import mdbCli from "./mdb";
+import utils from "./utils";
+import chalk from 'chalk';
+import figlet from 'figlet';
 const pkg = require("../package.json");
 
 updateNotifer({ pkg }).notify();
 
-const cliOptions = meow(
+console.log(
+  chalk.yellow(
+    figlet.textSync('mmbb', { horizontalLayout: 'full' })
+  )
+);
+
+const cliOptions: any = meow(
   `
   Usage
     $ markdown-badge
@@ -29,7 +37,7 @@ const cliOptions = meow(
 );
 
 const options = {
-  updateDocs: data => mdbCli.updateFile(data),
+  updateDocs: (filePath: string) => mdbCli.updateFile(filePath),
   generateHook: () => mdbCli.generate()
 };
 

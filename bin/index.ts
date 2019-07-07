@@ -1,13 +1,13 @@
-const { execSync } = require("child_process");
-const fs = require("fs");
-const path = require("path");
+import { execSync } from "child_process";
+import fs from "fs";
+import path from "path";
 
-function getTemplate(src) {
+function getTemplate(src: string) {
   const templatePath = path.resolve(src);
   return fs.readFileSync(templatePath).toString();
 }
 
-function badges(content, config, template) {
+function badges(content: string, config: { addNewLine: boolean; appendToOriginalContent: boolean; }, template: string): string {
   const newLine = config.addNewLine === true ? "\n" : "";
   const appendedContent = config.appendToOriginalContent ? content : "";
   const updatedContent = appendedContent + template + newLine;
@@ -28,7 +28,7 @@ function getCurrentBranch() {
   }
 }
 
-function applyTransform(data, config) {
+function applyTransform(data: string, config: { placeholder: string; originalPath: string; }) {
   let branch = getCurrentBranch();
 
   let appendSlash = true;
@@ -53,11 +53,13 @@ function applyTransform(data, config) {
     .join(branch ? handleSlash() : "");
 }
 
-module.exports = function(content, pluginOptions, { originalPath }) {
+module.exports = function(content: string, pluginOptions: any, data: any) {
   // setup plugin config
   const defaultOptions = {
     addNewLine: false
   };
+
+  const originalPath: string = data.originalPath;
 
   const userOptions = pluginOptions || {};
   const pluginConfig = { defaultOptions, ...userOptions, originalPath };
